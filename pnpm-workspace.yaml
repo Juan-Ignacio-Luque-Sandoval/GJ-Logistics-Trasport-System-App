@@ -1,0 +1,4 @@
+# Not a workspace: pnpm 11 reads its project settings from this file. Same build allowances as
+# GJ-plm-srm's root, for the packages this project actually installs.
+allowBuilds:
+  esbuild: true

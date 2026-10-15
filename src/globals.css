@@ -1,0 +1,73 @@
+/* The shell's own styles. The design system is loaded before this file (main.tsx imports
+   @zp/ui/styles.css: tokens → themes → components). Tokens only, no hex: every value below follows
+   the active theme. */
+
+/* ---------- chrome ---------- */
+.gj-root { display: flex; flex-direction: column; height: 100dvh; background: var(--color-canvas); }
+.gj-frame { display: flex; flex: 1; min-height: 0; }
+.gj-column { display: flex; flex: 1; flex-direction: column; min-width: 0; }
+.gj-header {
+  display: flex; align-items: center; flex-shrink: 0; height: 48px; padding: 0 var(--space-6);
+  background: var(--color-surface); border-bottom: 1px solid var(--color-border);
+}
+.gj-main { flex: 1; overflow-y: auto; }
+.gj-page { max-width: 1600px; margin: 0 auto; padding: var(--space-8) var(--space-6); }
+
+.gj-appearance { padding: var(--space-2) var(--space-3); border-top: 1px solid var(--color-border); }
+.zp .gj-appearance-trigger { width: 100%; justify-content: flex-start; }
+.gj-appearance-note { margin: 0 0 var(--space-3); }
+
+.gj-envbar {
+  display: flex; align-items: center; justify-content: center; gap: var(--space-2); flex-shrink: 0; height: 24px;
+  background: var(--color-warning-subtle); color: var(--color-warning-text); border-top: 1px solid var(--color-border);
+  font: var(--type-caption); letter-spacing: .08em; text-transform: uppercase; user-select: none;
+}
+
+.gj-not-found { display: flex; align-items: center; justify-content: center; min-height: 100dvh; padding: var(--space-8); }
+
+/* ---------- page layout ---------- */
+.gj-stack { display: flex; flex-direction: column; gap: var(--space-6); }
+.gj-grid { display: grid; gap: var(--space-4); grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); }
+.gj-page-header { display: flex; align-items: flex-start; gap: var(--space-4); }
+.gj-page-title { margin: 0; font: var(--type-display); color: var(--color-text); }
+.gj-page-subtitle { margin: var(--space-2) 0 0; font: var(--type-body); color: var(--color-text-muted); }
+.gj-title-row { gap: var(--space-3); }
+
+/* ---------- ui-local ---------- */
+.gj-card {
+  display: flex; flex-direction: column; background: var(--color-surface); border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg); box-shadow: var(--elevation-1); min-width: 0;
+}
+.gj-card-header { display: flex; flex-direction: column; gap: var(--space-1); padding: var(--space-4) var(--space-5); }
+.gj-card-title-row { gap: var(--space-2); align-items: flex-start; }
+.gj-card-icon { display: inline-flex; padding-top: 4px; }
+.gj-card-title { margin: 0; font: var(--type-title); color: var(--color-text); }
+.gj-card-description { margin: 0; font: var(--type-body-sm); color: var(--color-text-muted); }
+.gj-card-tag { display: block; font: var(--type-caption); color: var(--color-text-faint); margin-bottom: var(--space-1); }
+.gj-card-body { padding: 0 var(--space-5) var(--space-5); }
+.gj-card-header + .gj-card-body { margin-top: calc(-1 * var(--space-1)); }
+.gj-card-body:first-child { padding-top: var(--space-4); }
+.gj-card-link { display: block; color: inherit; text-decoration: none; border-radius: var(--radius-lg); }
+.gj-card-link:hover .gj-card { border-color: var(--color-border-strong); }
+.gj-card-link:focus-visible { outline: 2px solid var(--color-focus-ring); outline-offset: 2px; }
+.gj-fill { height: 100%; }
+
+.gj-link { color: inherit; text-decoration: none; }
+.gj-link:hover { color: var(--color-primary-hover); text-decoration: underline; text-underline-offset: 3px; }
+.gj-link:focus-visible { outline: 2px solid var(--color-focus-ring); outline-offset: 2px; border-radius: var(--radius-sm); }
+
+.gj-app-list { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: var(--space-2); }
+.gj-app-list li { display: flex; align-items: center; justify-content: space-between; gap: var(--space-2); }
+
+.gj-def-row { display: grid; grid-template-columns: 8rem 1fr; gap: var(--space-1) var(--space-4); }
+.gj-def-row > :last-child { min-width: 0; overflow-wrap: anywhere; }
+
+.gj-spec-note {
+  display: flex; flex-wrap: wrap; gap: var(--space-1) var(--space-3); padding: var(--space-3) var(--space-4);
+  background: var(--color-surface-sunken); border: 1px solid var(--color-border); border-radius: var(--radius-md);
+  font: var(--type-body-sm); color: var(--color-text-muted);
+}
+.gj-spec-note-ref { flex-shrink: 0; font-weight: 600; color: var(--color-text); }
+.gj-spec-note-text { flex: 1 1 12rem; min-width: 0; overflow-wrap: anywhere; }
+
+.zp a.btn { text-decoration: none; }

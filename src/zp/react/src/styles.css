@@ -1,0 +1,7 @@
+/* Everything the components need, in order: shared tokens → per-theme colours → component styles → Appearance picker. */
+@import "../../tokens/tokens.css";
+@import "../../tokens/themes.css";
+@import "../../css/zp-components.css";
+@import "./theme/theme-picker.css";
+
+html, body { margin: 0; background: var(--color-canvas); color: var(--color-text); }

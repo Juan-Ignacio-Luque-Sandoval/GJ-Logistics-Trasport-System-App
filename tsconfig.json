@@ -1,0 +1,17 @@
+{
+  // Same base as GJ-plm-srm, relaxed in the three ways the vendored design system (src/zp) needs:
+  // it is written against plain `strict` and is not edited here, so it has to compile under the
+  // options it was written for.
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "types": ["vite/client", "node"],
+    "exactOptionalPropertyTypes": false,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "paths": {
+      "@zp/ui": ["./src/zp/react/src/index.ts"],
+      "~/*": ["./src/*"]
+    }
+  },
+  "include": ["src", "vite.config.ts"]
+}

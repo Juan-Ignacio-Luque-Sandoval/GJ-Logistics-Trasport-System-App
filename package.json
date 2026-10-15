@@ -1,0 +1,39 @@
+{
+  "name": "gj-prototype-system",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Gloria Jeans prototype shell: an empty reference shell that new prototypes plug into",
+  "type": "module",
+  "packageManager": "pnpm@11.5.1",
+  "engines": {
+    "node": ">=20",
+    "pnpm": ">=9"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "@tanstack/react-router": "^1.170.41",
+    "react": "^19.2.6",
+    "react-dom": "^19.2.6"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9",
+    "@tanstack/router-plugin": "1.168.42",
+    "@types/node": "^22",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^4.5.0",
+    "eslint": "^9",
+    "eslint-plugin-react": "^7",
+    "eslint-plugin-react-hooks": "^5",
+    "globals": "^15",
+    "typescript": "^5",
+    "typescript-eslint": "^8",
+    "vite": "^6.3.5"
+  }
+}
