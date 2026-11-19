@@ -10,13 +10,23 @@ re-sync, copy the same paths from a newer drop, re-apply the patches and update 
 | --- | --- | --- |
 | `zp/react/src/` | `react/src/` | The React components. Patched: see below. |
 | `zp/tokens/tokens.css`, `zp/tokens/themes.css` | `tokens/` | Unedited. `styles.css` imports them by relative path, so the layout mirrors the source. |
-| `zp/css/zp-components.css` | `css/` | Unedited. |
+| `zp/css/zp-components.css` | `css/` | Patched: see below. |
 | `zp/docs/` | `docs/` | Unedited. Read `AGENT_GUIDE.md` before building a prototype. |
 
 Not copied: `reference/` (the 75 visual reference pages), `specs/` (behaviour specs), `starter/`,
 the JSON token files, the Tailwind preset and the shadcn theme. Open them in the source folder.
 
 ## Patches
+
+Re-apply these after a re-sync, unless the newer drop already has them. Each is logged in
+`CHANGELOG.md` with what other projects using `@zp/ui` should change.
+
+`zp/css/zp-components.css`, style fix (2026-10-15):
+
+- After the `.zp button.cb,…,.zp button.node{…border-style:solid…}` reset, add
+  `.zp button.sw{border:0}`. Without it the `Switch` gets the browser's default 2px black border
+  and its thumb touches the edge.
+  Fixed upstream in `1.0.1`: drop this patch when re-syncing from `1.0.1` or later.
 
 The package is typed for React 18; this shell runs React 19. Type-only changes in
 `zp/react/src/overlays.tsx`, no behaviour change:

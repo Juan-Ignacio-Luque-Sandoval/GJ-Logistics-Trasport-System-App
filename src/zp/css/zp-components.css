@@ -438,6 +438,7 @@
 .zp .btn,.zp .cb,.zp .rd,.zp .sw,.zp .tab,.zp .node,.zp .mi,.zp .opt,.zp .st{cursor:pointer}
 .zp .btn[aria-disabled="true"],.zp .btn:disabled{opacity:.55;cursor:not-allowed}
 .zp button.cb,.zp button.rd,.zp button.sw,.zp button.tab,.zp button.mi,.zp button.node{font:inherit;color:inherit;border-style:solid;padding:0;margin:0;-webkit-appearance:none;appearance:none}
+.zp button.sw{border:0}
 .zp button.tab{background:none;border-width:0 0 2px;border-color:transparent;padding:10px 2px 9px}
 .zp button.tab.on{border-bottom-color:var(--brand)}
 .zp button.mi,.zp button.node{background:none;border:0;width:100%;text-align:left}
